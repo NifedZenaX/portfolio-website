@@ -8,10 +8,11 @@ export default function Profile() {
             {/* Profile Picture */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Image 
-                    src="/next.svg" 
+                    src="/profile_picture.jpg" 
                     alt="Profile Picture"
-                    width={150} 
-                    height={150}
+                    width={400} 
+                    height={400}
+                    className="rounded-full"
                 />
                 <div>
                     <h1 className="text-5xl font-bold mb-4 text-left">Willie Soo</h1>
