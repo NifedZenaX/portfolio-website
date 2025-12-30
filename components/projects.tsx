@@ -13,15 +13,17 @@ export default async function Projects() {
                         <div className="p-6 bg-white/70 rounded-2xl shadow-lg">
                             <h3 className="text-xl font-bold mb-2">{project.project_name}</h3>
                             <p>{project.description}</p>
-                            {project.technologies && project.technologies.map((tech) => (
-                                <span className="px-4 py-2 bg-blue-200 rounded-full">{tech}</span>
-                            ))}
                             <Link 
                                 href={project.link} 
                                 target="_blank" 
                                 className="text-blue-500 underline mt-4 inline-block">
                                 Source Code
                             </Link>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {project.technologies && project.technologies.map((tech) => (
+                                    <span className="px-4 py-2 bg-blue-200 rounded-full">{tech}</span>
+                                ))}
+                            </div>
                         </div>
                     ))        
                 }

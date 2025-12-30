@@ -9,7 +9,7 @@ export default async function Skills() {
                 { skills.length <= 0 ? 
                     <h3 className="text-lg font-semibold">No skills found.</h3> :
                     skills.map((skill) => (
-                        <span className="px-4 py-2 bg-blue-200 rounded-full">{skill.skill_name}</span>
+                        <span className="px-4 py-2 bg-blue-100 rounded-full shadow-xl">{skill.skill_name}</span>
                     ))
                 }
                 {/* <span className="px-4 py-2 bg-blue-200 rounded-full">Java</span>
