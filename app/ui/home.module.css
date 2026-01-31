@@ -1,0 +1,29 @@
+.profile_section_bg {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    background-color: #EAF3FF;
+    background-image: linear-gradient(
+        to bottom,
+        #EAF3FF 10%,
+        #FFFFFF 50%
+    );
+    border-radius: 30px;
+}
+
+.main_text_gray {
+    font-size: 300%;
+    text-align: left;
+    font-weight: bold;
+    color: #0F172A;
+}
+
+.secondary_text_gray {
+    font-size: 150%;
+    text-align: left;
+    font-weight: bold;
+    color: #475569;
+}

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from '@/app/ui/home.module.css';
 import { calculateAge } from "@/app/lib/utils";
 
 export default function Profile() {
     return (
-        <section className="max-w-5xl mx-auto text-center py-16">
+        <section className={`max-w-5xl mx-auto text-center py-16 ${styles.sectionBg}`}>
             {/* Profile Picture */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* <div className="p-6 bg-radial rounded-md bg-blue-100 grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+            <div className={styles.profile_section_bg}>
                 <Image 
                     src="/profile_picture.jpg" 
                     alt="Profile Picture"
@@ -15,8 +17,8 @@ export default function Profile() {
                     className="rounded-full"
                 />
                 <div>
-                    <h1 className="text-5xl font-bold mb-4 text-left">Willie Soo</h1>
-                    <h2 className="text-2xl font-semibold mb-2 text-left">{calculateAge()}</h2>
+                    <h1 className={styles.main_text_gray}>Willie Soo</h1>
+                    <h2 className={styles.secondary_text_gray}>{calculateAge()}</h2>
                     <p className="text-lg text-left">
                         Hi! I am a software developer, primarily working as a backend developer, but not limited to learning
                         other areas such as frontend, devops, mobile development, game development and more. I love learning new technologies and
