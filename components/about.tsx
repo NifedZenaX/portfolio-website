@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from '@/app/ui/home.module.css';
 import { calculateAge } from "@/app/lib/utils";
 
-export default function Profile() {
+export default function About() {
     return (
         <section className={`max-w-5xl mx-auto text-center py-16 ${styles.sectionBg}`}>
             {/* Profile Picture */}
