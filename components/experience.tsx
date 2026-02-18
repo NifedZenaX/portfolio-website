@@ -1,10 +1,12 @@
+import styles from '@/app/ui/home.module.css'
+
 export default function Experience() {
     return (
-        <div>
-            <h1>Experience</h1>
+        <section className={styles.section}>
+            <h1 className={styles.heading1}>Experience</h1>
             <div>
                 <h2>Backend Engineer</h2>
-                <p>Kredit Pintar Indonesia</p>
+                <h3>Kredit Pintar Indonesia</h3>
                 <p>Oct 2024 - Present</p>
                 <ul>
                     <li>Design and implement scalable backend services using Node.js and Express, ensuring high performance and reliability.</li>
@@ -13,6 +15,6 @@ export default function Experience() {
                     <li>Participate in code reviews and contribute to the continuous improvement of development processes.</li>
                 </ul>
             </div>
-        </div>
+        </section>
     );
 }
