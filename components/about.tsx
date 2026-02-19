@@ -8,14 +8,14 @@ export default function About() {
         <section className={styles.section}>
             {/* Profile Picture */}
             {/* <div className="p-6 bg-radial rounded-md bg-blue-100 grid grid-cols-1 md:grid-cols-2 gap-6"> */}
-            <Image 
+            {/* <Image 
                 src="/profile_picture.jpg" 
                 alt="Profile Picture"
                 width={400} 
                 height={400}
                 className="rounded-full p-6"
-            />
-            <div>
+            /> */}
+            <div className="w-[70%]">
                 <p className={styles.text}>
                     Hi! I am a software developer, primarily working as a backend developer, but not limited to learning
                     other areas such as frontend, devops, mobile development, game development and more. I love learning new technologies and
@@ -40,6 +40,7 @@ export default function About() {
                     </Link>
                 </div>
             </div>
+            <h1 className={styles.heading1}>About</h1>
         </section>
     )
 }

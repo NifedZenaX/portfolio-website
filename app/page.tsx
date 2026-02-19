@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
 
       {/* About Section */}
-      {/* <About /> */}
+      <About />
 
       {/* Experience Section */}
       <Experience />

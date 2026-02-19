@@ -7,8 +7,8 @@ export default async function Projects() {
     return (
         <section id="projects" className={styles.section}>
             <div>
-                <h1 className={styles.heading1}>Projects</h1>
-                <div className="grid gap-8">
+                <h1 className={`text-center ${styles.heading1}`}>Projects</h1>
+                <div className="grid grid-cols-3 gap-8">
                     {/* { projects.length <= 0 ? 
                         <h3 className="text-lg font-semibold text-center">No projects found.</h3> :
                         projects.map((project) => (
@@ -32,6 +32,10 @@ export default async function Projects() {
                     <div className={styles.card}>
                         <h3 className={styles.heading3}>Project One</h3>
                         <p className={styles.text}>A cool project description goes here.</p>
+                    </div>
+                    <div className={styles.card}>
+                        <h3 className={styles.heading3}>Project Two</h3>
+                        <p className={styles.text}>Another cool project description goes here.</p>
                     </div>
                     <div className={styles.card}>
                         <h3 className={styles.heading3}>Project Two</h3>
