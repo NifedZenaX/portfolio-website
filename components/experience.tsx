@@ -5,10 +5,10 @@ export default function Experience() {
         <section className={styles.section}>
             <h1 className={styles.heading1}>Experience</h1>
             <div>
-                <h2>Backend Engineer</h2>
-                <h3>Kredit Pintar Indonesia</h3>
-                <p>Oct 2024 - Present</p>
-                <ul>
+                <h2 className={styles.heading2}>Backend Engineer</h2>
+                <h3 className={styles.heading3}>Kredit Pintar Indonesia</h3>
+                <p className={styles.text}>Oct 2024 - Present</p>
+                <ul className={styles.text}>
                     <li>Design and implement scalable backend services using Node.js and Express, ensuring high performance and reliability.</li>
                     <li>Collaborate with cross-functional teams to define API specifications and integrate third-party services.</li>
                     <li>Optimize database queries and implement caching strategies to improve application performance.</li>

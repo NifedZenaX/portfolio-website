@@ -4,14 +4,14 @@ import styles from '@/app/ui/home.module.css'
 
 export default function Contact() {
     return (
-        <section className={styles.section}>
+        <section id="contact" className={styles.section}>
             <div>
-                <h1>Let's Build Something Together</h1>
-                <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hi! I'm always open to connecting with like-minded individuals and exploring new opportunities.</p>
+                <h1 className={`text-center ${styles.heading1}`}>Let's Build Something Together</h1>
+                <p className={styles.text}>Feel free to reach out to me for any inquiries, collaborations, or just to say hi! I'm always open to connecting with like-minded individuals and exploring new opportunities.</p>
 
-                <div className="flex items-center justify-around">
-                    <Link href="mailto:williesoo0108@gmail.com" target="_blank">
-                        <Image src="/email-icon.png" alt="Email Icon" width={32} height={32} />
+                <div className="flex items-center justify-around mt-5">
+                    <Link href="mailto:soo.willie@yahoo.com" target="_blank">
+                        <Image src="/email.png" alt="Email Icon" width={32} height={32} />
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/willie-soo-706047209/" target="_blank">

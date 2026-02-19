@@ -12,13 +12,13 @@ export default function Hero() {
                 <p className={styles.text}>Building reliable and scalable backend systems using Java, Go, and cloud-native technologies.</p>
                 <p className={styles.text}>Focused on clean architecture, performance, and production-ready systems.</p>
 
-                {/* <Link href="/projects">
+                <Link href="/#projects" className={`mr-2 ${styles.button}`}>
                     <button>Projects</button>
                 </Link>
 
-                <Link href="/contact">
+                <Link href="/#contact" className={`ml-2 ${styles.button}`}>
                     <button>Contact me</button>
-                </Link> */}
+                </Link>
             </div>
         </section>
     )
