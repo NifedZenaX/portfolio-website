@@ -1,0 +1,5 @@
+.ul_bullet {
+  list-style-type: disc; /* disc for filled circles */
+  padding-left: 1.5rem; /* pl-6 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}

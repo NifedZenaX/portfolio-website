@@ -1,6 +1,7 @@
 import { getProjects } from "@/app/lib/data"
 import Link from "next/link";
 import styles from "@/app/ui/home.module.css";
+import projectStyles from "@/app/ui/project.module.css";
 
 export default async function Projects() {
     // const projects = await getProjects();
@@ -29,17 +30,13 @@ export default async function Projects() {
                             </div>
                         ))        
                     } */}
-                    <div className={styles.card}>
-                        <h3 className={styles.heading3}>Project One</h3>
-                        <p className={styles.text}>A cool project description goes here.</p>
+                    <div className={projectStyles.card}>
+                        <h3 className={styles.heading3}>Immunopedia</h3>
+                        <p className={styles.text}>A tower defense game where you play as a commander and deploy immune cells as your troops to fight various bacteria.</p>
                     </div>
-                    <div className={styles.card}>
-                        <h3 className={styles.heading3}>Project Two</h3>
-                        <p className={styles.text}>Another cool project description goes here.</p>
-                    </div>
-                    <div className={styles.card}>
-                        <h3 className={styles.heading3}>Project Two</h3>
-                        <p className={styles.text}>Another cool project description goes here.</p>
+                    <div className={projectStyles.card}>
+                        <h3 className={styles.heading3}>Escapigs</h3>
+                        <p className={styles.text}>An endless runner game where you play as a pig and try to escape from a food lab.</p>
                     </div>
                 </div>
             </div>

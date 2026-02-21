@@ -2,45 +2,46 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from '@/app/ui/home.module.css';
 import { calculateAge } from "@/app/lib/utils";
+import { FaGithub } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+
 
 export default function About() {
     return (
         <section className={styles.section}>
-            {/* Profile Picture */}
-            {/* <div className="p-6 bg-radial rounded-md bg-blue-100 grid grid-cols-1 md:grid-cols-2 gap-6"> */}
-            {/* <Image 
-                src="/profile_picture.jpg" 
-                alt="Profile Picture"
-                width={400} 
-                height={400}
-                className="rounded-full p-6"
-            /> */}
+            <h1 className={styles.heading1}>About</h1>
+
             <div className="w-[70%]">
                 <p className={styles.text}>
-                    Hi! I am a software developer, primarily working as a backend developer, but not limited to learning
-                    other areas such as frontend, devops, mobile development, game development and more. I love learning new technologies and
-                    I love to challenge myself with new things.
+                I am a backend engineer specializing in scalable and high-performance systems within fintech environments. 
+                My experience includes optimizing complex database operations, improving system throughput, and building reliable 
+                APIs designed for production workloads.
                 </p>
-                <div className="flex justify-start mt-4 gap-4">
-                    <Link href="https://www.linkedin.com/in/willie-soo-706047209/" target="_blank">
-                        <Image 
-                            src="/linkedin.png" 
-                            alt="LinkedIn Profile"
-                            width={30} 
-                            height={30}
-                        />
-                    </Link>
-                    <Link href="https://github.com/NifedZenaX" target="_blank">
-                        <Image 
-                            src="/github.png" 
-                            alt="Github Profile"
-                            width={30} 
-                            height={30}
-                        />
-                    </Link>
+
+                <p className={`${styles.text} mt-4`}>
+                I value clean architecture, observability, and long-term maintainability. I enjoy analyzing performance bottlenecks 
+                and designing systems that remain stable as they scale.
+                </p>
+
+                <p className={`${styles.text} mt-4`}>
+                In addition to backend development, I explore game development and interactive applications, which broadens my perspective 
+                on system behavior and user-driven performance considerations.
+                </p>
+
+                <p className={`${styles.text} mt-4`}>
+                I am actively preparing to work in international engineering environments, particularly in Japan. Alongside strengthening my 
+                backend and infrastructure expertise, I continue to develop my Japanese language skills to better collaborate in global teams.
+                </p>
+
+                <div className="flex justify-start mt-6 gap-4">
+                <Link href="https://www.linkedin.com/in/willie-soo-706047209/" target="_blank">
+                    <CiLinkedin className="text-3xl" />
+                </Link>
+                <Link href="https://github.com/NifedZenaX" target="_blank">
+                    <FaGithub className="text-3xl" />
+                </Link>
                 </div>
             </div>
-            <h1 className={styles.heading1}>About</h1>
         </section>
     )
 }

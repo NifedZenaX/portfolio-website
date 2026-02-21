@@ -9,15 +9,19 @@ export default function Hero() {
                 <h2 className={styles.heading2}>Backend Engineer</h2>
             </div>
             <div>
-                <p className={styles.text}>Building reliable and scalable backend systems using Java, Go, and cloud-native technologies.</p>
-                <p className={styles.text}>Focused on clean architecture, performance, and production-ready systems.</p>
+                <p className={styles.text}>
+                Backend engineer specializing in scalable fintech systems and high-performance APIs.
+                </p>
+                <p className={styles.text}>
+                Experienced in Java and Go, with a strong focus on database optimization, automation, and production reliability.
+                </p>
 
                 <Link href="/#projects" className={`mr-2 ${styles.button}`}>
-                    <button>Projects</button>
+                <button>View Projects</button>
                 </Link>
 
                 <Link href="/#contact" className={`ml-2 ${styles.button}`}>
-                    <button>Contact me</button>
+                <button>Contact Me</button>
                 </Link>
             </div>
         </section>
