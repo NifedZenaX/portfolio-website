@@ -1,7 +1,8 @@
 .experience_container {
   overflow-y: auto; /* Enable vertical scrolling */
-  height: 12.5rem; /* Set a fixed height (e.g., 200px) */
-  width: 70%; /* Set the width to 70% */
+  height: 15rem; /* Set a fixed height (e.g., 200px) */
+  max-width: 1024px;
+  padding: 0 1.5rem;
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: var(--accent) transparent; /* For Firefox */
 }

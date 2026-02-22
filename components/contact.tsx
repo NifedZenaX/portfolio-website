@@ -9,7 +9,7 @@ export default function Contact() {
         <section id="contact" className={styles.section}>
             <div className="w-[80%]">
                 <h1 className={`text-center ${styles.heading1}`}>Let's Build Something Together</h1>
-                <p className={styles.text}>Feel free to reach out to me for any inquiries, collaborations, or just to say hi! I'm always open to connecting with like-minded individuals and exploring new opportunities.</p>
+                <p className={`${styles.text} text-center`}>Feel free to reach out to me for any inquiries, collaborations, or just to say hi! I'm always open to connecting with like-minded individuals and exploring new opportunities.</p>
 
                 <div className="flex items-center justify-around mt-10">
                     <Link href="mailto:soo.willie@yahoo.com" target="_blank">

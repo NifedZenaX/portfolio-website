@@ -6,10 +6,10 @@ import projectStyles from "@/app/ui/project.module.css";
 export default async function Projects() {
     // const projects = await getProjects();
     return (
-        <section id="projects" className={styles.section}>
+        <section id="projects" className={`${styles.section}`}>
             <div>
                 <h1 className={`text-center ${styles.heading1}`}>Projects</h1>
-                <div className="grid grid-cols-3 gap-8">
+                <div className={projectStyles.projects_container}>
                     {/* { projects.length <= 0 ? 
                         <h3 className="text-lg font-semibold text-center">No projects found.</h3> :
                         projects.map((project) => (

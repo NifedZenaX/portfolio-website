@@ -11,7 +11,7 @@ export default function About() {
         <section className={styles.section}>
             <h1 className={styles.heading1}>About</h1>
 
-            <div className="w-[70%]">
+            <div className="max-w-4xl px-6">
                 <p className={styles.text}>
                 I am a backend engineer specializing in scalable and high-performance systems within fintech environments. 
                 My experience includes optimizing complex database operations, improving system throughput, and building reliable 

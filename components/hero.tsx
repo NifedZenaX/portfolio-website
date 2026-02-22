@@ -8,7 +8,7 @@ export default function Hero() {
                 <h1 className={styles.heading1}>Willie Soo</h1>
                 <h2 className={styles.heading2}>Backend Engineer</h2>
             </div>
-            <div>
+            <div className="max-w-3xl px-6">
                 <p className={styles.text}>
                 Backend engineer specializing in scalable fintech systems and high-performance APIs.
                 </p>
@@ -17,7 +17,7 @@ export default function Hero() {
                 </p>
 
                 <Link href="/#projects" className={`mr-2 ${styles.button}`}>
-                <button>View Projects</button>
+                <button>Projects</button>
                 </Link>
 
                 <Link href="/#contact" className={`ml-2 ${styles.button}`}>

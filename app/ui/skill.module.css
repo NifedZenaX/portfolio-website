@@ -5,4 +5,5 @@
   margin-left: 0.25rem;       /* mx-1 */
   margin-right: 0.25rem;      /* mx-1 */
   display: inline-block;      /* important for spacing */
+  text-align: center;
 }
