@@ -1,12 +1,12 @@
 .card {
     padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--card-bg);
     border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px #dbeafe, 0 4px 6px -2px #dbeafe;
+    box-shadow: 0 10px 15px -3px var(--card-shadow), 0 4px 6px -2px var(--card-shadow);
     transition: all 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    background-color: rgba(231, 231, 231, 0.7);
+    background-color: var(--card-hover-bg);
 }

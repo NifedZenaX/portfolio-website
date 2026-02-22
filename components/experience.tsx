@@ -5,7 +5,7 @@ export default function Experience() {
     return (
         <section className={styles.section}>
             <h1 className={styles.heading1}>Experience</h1>
-            <div className="overflow-y-auto h-50 w-[70%]">
+            <div className={expStyles.experience_container}>
                 <h2 className={styles.heading2}>Backend Engineer</h2>
                 <h3 className={styles.heading3}>Kredit Pintar Indonesia</h3>
                 <p className={styles.text}>Oct 2024 - Present</p>

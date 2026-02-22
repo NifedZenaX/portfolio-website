@@ -1,0 +1,43 @@
+.switch {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 20%;
+    border: 1px solid var(--button-bg);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hide checkbox */
+.switch input {
+    display: none;
+}
+
+/* Icon */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--heading);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.switch:hover {
+    transform: scale(1.05);
+}
+
+/* Optional subtle press animation */
+.switch:active .icon {
+    transform: rotate(180deg);
+}

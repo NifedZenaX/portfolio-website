@@ -1,3 +1,29 @@
+.experience_container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 12.5rem; /* Set a fixed height (e.g., 200px) */
+  width: 70%; /* Set the width to 70% */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--accent) transparent; /* For Firefox */
+}
+
+.experience_container::-webkit-scrollbar {
+  width: 6px; /* For WebKit browsers */
+}
+
+.experience_container::-webkit-scrollbar-track {
+  background: transparent; /* For WebKit browsers */
+}
+
+.experience_container::-webkit-scrollbar-thumb {
+  background-color: var(--accent); /* For WebKit browsers */
+  border-radius: 9999px;
+  border: none;
+}
+
+.experience_container::-webkit-scrollbar-button {
+  display: none; /* For WebKit browsers */
+}
+
 .ul_bullet {
   list-style-type: disc; /* disc for filled circles */
   padding-left: 1.5rem; /* pl-6 */

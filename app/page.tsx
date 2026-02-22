@@ -6,10 +6,14 @@ import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import ThemeToggle from "@/components/darkToggle";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-800 p-8">
+    <main className="min-h-screen p-8">
+      {/* Dark mode toggle */}
+      <ThemeToggle />
+      
       {/* Hero Section */}
       <Hero />
 

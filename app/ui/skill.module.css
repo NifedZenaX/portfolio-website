@@ -1,5 +1,5 @@
 .skill_pill {
-  border: 1px solid #3b82f6;  /* border-[#3b82f6] + border-1 + border-solid */
+  border: 1px solid var(--button-bg);  /* border-[#3b82f6] + border-1 + border-solid */
   border-radius: 9999px;      /* rounded-full */
   padding: 0.5rem 1rem;       /* py-2 (0.5rem) px-4 (1rem) */
   margin-left: 0.25rem;       /* mx-1 */
