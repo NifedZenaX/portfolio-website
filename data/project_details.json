@@ -1,0 +1,22 @@
+{
+    "immunopedia": {
+        "title": "Immunopedia",
+        "background": "This game is made for the Binus Game Development Club program called PKM (Pengabdian Kepada Masyarakat/Community Service) as a media to educate the public about our body's immune system.",
+        "description": "Immunopedia is a 2D tower defense game with immune system as the theme. You will play as the commander of the immune system and deploy immune cells as your troops to fight various bacteria. The game is also equipped with an immune system dictionary so you can learn about our own immune system with a fun and interactive way.",
+        "technologies": "Unity, C#",
+        "responsibilities": "My role in this project is as a game programmer, where my main responsibilities are to implement the game mechanics and features, such as the tower defense system and level system. I also work closely with the game designer to ensure that the game is fun and engaging to play, and also collaborated with the artist and sound designer to further enhance the game experience.",
+        "gamePage": "https://bgdc.itch.io/immunopedia",
+        "repository": "https://github.com/wainini/Immunopedia",
+        "image": "/immunopedia.png"
+    },
+    "escapigs": {
+        "title": "Escapigs",
+        "background": "This game is made as part of Binus Game Development Club's Talent Group program, where we are tasked to create a game within 2 or 3 months in a team of 5 or 6 people.",
+        "description": "Escapigs is a 2D endless runner game where you play as an experimental pig that is trying to escape from the laboratory, and you have to eat food to keep alive due to a skinning chemical agent that you are exposed to.",
+        "technologies": "Unity, C#",
+        "responsibilities": "My role in this project is as a game programmer, where my main responsibilities are to implement the core game mechanic, such as the endless runner mechanic, feeding and death triggers. I also worked as a sound engineer, where I created sound effects that enhanced the game's experience, such as the sound of eating and the sound of death. I also collaborated with the game designer and artist to make the game more fun and engaging to play.",
+        "gamePage": "https://bgdc.itch.io/escapigs",
+        "repository": "",
+        "image": "/escapigs.jpg"
+    }
+}

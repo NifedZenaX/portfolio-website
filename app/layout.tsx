@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "@/app/ui/fonts";
+import ThemeToggle from "@/components/darkToggle";
 
 export const metadata: Metadata = {
   title: "Willie's Portfolio",
@@ -17,6 +18,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
+        {/* Dark mode toggle */}
+        <ThemeToggle />
         {children}
       </body>
     </html>

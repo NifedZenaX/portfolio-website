@@ -1,0 +1,42 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.skills {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.buttonGroup {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+
+  .heading1,
+  .heading2 {
+    text-align: left;
+  }
+}

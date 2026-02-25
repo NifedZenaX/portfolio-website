@@ -11,9 +11,6 @@ import ThemeToggle from "@/components/darkToggle";
 export default function Home() {
   return (
     <main className="min-h-screen p-8">
-      {/* Dark mode toggle */}
-      <ThemeToggle />
-      
       {/* Hero Section */}
       <Hero />
 

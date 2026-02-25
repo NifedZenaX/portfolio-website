@@ -30,14 +30,14 @@ export default async function Projects() {
                             </div>
                         ))        
                     } */}
-                    <div className={projectStyles.card}>
+                    <Link href="/projects/immunopedia" className={projectStyles.card}>
                         <h3 className={styles.heading3}>Immunopedia</h3>
                         <p className={styles.text}>A tower defense game where you play as a commander and deploy immune cells as your troops to fight various bacteria.</p>
-                    </div>
-                    <div className={projectStyles.card}>
+                    </Link>
+                    <Link href="/projects/escapigs" className={projectStyles.card}>
                         <h3 className={styles.heading3}>Escapigs</h3>
                         <p className={styles.text}>An endless runner game where you play as a pig and try to escape from a food lab.</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
