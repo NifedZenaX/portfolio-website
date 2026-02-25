@@ -24,7 +24,7 @@ export default function Contact() {
                         <CiInstagram className="text-3xl" />
                     </Link>
 
-                    <Link href="https://wa.me/6385777993855" target="_blank">
+                    <Link href="https://wa.me/6287702034343" target="_blank">
                         <FaWhatsapp className="text-3xl" />
                     </Link>
                 </div>
