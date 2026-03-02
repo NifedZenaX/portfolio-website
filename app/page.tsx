@@ -6,7 +6,7 @@ import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
-import ThemeToggle from "@/components/darkToggle";
+import Writing from "@/components/writing";
 
 export default function Home() {
   return (
@@ -22,6 +22,9 @@ export default function Home() {
 
       {/* Projects Section */}
       <Projects />
+
+      {/* Writing Section */}
+      <Writing />
 
       {/* Skills Section */}
       <Skills />

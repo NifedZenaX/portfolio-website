@@ -18,3 +18,9 @@ export type Skill = {
     id: string;
     skill_name: string;
 };
+
+export type Blogs = {
+    id: string;
+    title: string;
+    created_time: string;
+}
