@@ -32,3 +32,25 @@ export type BlogPost = {
         content: string
     }[];
 }
+
+export type NotionBlock = {
+    type: string;
+    results: {
+        type: string;
+        id: string;
+        paragraph?: {
+            rich_text: {
+                plain_text: string;
+            }[];
+        };
+        heading_1?: {
+            rich_text: {
+                plain_text: string;
+            }[];
+        };
+        child_page?: {
+            title: string;
+        };
+        created_time: string;
+    }[];
+}

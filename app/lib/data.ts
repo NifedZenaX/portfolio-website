@@ -4,7 +4,8 @@ import {
     ProjectDTO,
     Skill,
     Blogs,
-    BlogPost
+    BlogPost,
+    NotionBlock
 } from './definitions';
 import { Client } from '@notionhq/client';
 import { create } from 'domain';
@@ -49,11 +50,12 @@ export async function getBlogs(){
     const notionClient = new Client({ auth: notionApiKey });
     try {
         const response = await notionClient.blocks.children.list({ block_id: notionBlogPageId });
-        const blogs: Blogs[] = response.results.map((obj) => {
+        const parsedResponse: NotionBlock = JSON.parse(JSON.stringify(response));
+        const blogs: Blogs[] = parsedResponse.results.map((obj) => {
             if (obj.type === 'child_page') {
                 return {
                     id: obj.id,
-                    title: obj.child_page.title,
+                    title: obj.child_page!.title,
                     created_time: new Date(obj.created_time).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
@@ -73,19 +75,20 @@ export async function getBlogPost(pageId: string) {
     const notionClient = new Client({ auth: notionApiKey });
     try {
         const response = await notionClient.blocks.children.list({ block_id: pageId });
+        const parsedResponse: NotionBlock = JSON.parse(JSON.stringify(response));
         const blogPost: BlogPost = {
             id: pageId,
-            content: response.results.map((block) => {
+            content: parsedResponse.results.map((block) => {
                 if (block.type === 'paragraph') {
                     return {
                         tag: 'p',
-                        content: block.paragraph.rich_text.map((text) => text.plain_text).join('')
+                        content: block.paragraph!.rich_text.map((text) => text.plain_text).join('')
                     }
                 } else if (block.type === 'heading_1') {
                     return {
                         // H1 will be for title, H2 will be for section headings
                         tag: 'h2',
-                        content: block.heading_1.rich_text.map((text) => text.plain_text).join('')
+                        content: block.heading_1!.rich_text.map((text) => text.plain_text).join('')
                     }
                 }
             }).filter(obj => obj !== null && obj !== undefined)
