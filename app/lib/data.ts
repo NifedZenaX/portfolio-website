@@ -3,10 +3,12 @@ import {
     Project,
     ProjectDTO,
     Skill,
-    Blogs
+    Blogs,
+    BlogPost
 } from './definitions';
 import { Client } from '@notionhq/client';
 import { create } from 'domain';
+import { resolve } from 'path';
 
 const sql = postgres(process.env.DATABASE_URL!, { ssl: 'require' });
 const notionBlogPageId = process.env.NOTION_BLOG_PAGE_ID!;
@@ -47,7 +49,6 @@ export async function getBlogs(){
     const notionClient = new Client({ auth: notionApiKey });
     try {
         const response = await notionClient.blocks.children.list({ block_id: notionBlogPageId });
-        console.log('Notion API Raw Response: ', response);
         const blogs: Blogs[] = response.results.map((obj) => {
             if (obj.type === 'child_page') {
                 return {
@@ -71,8 +72,25 @@ export async function getBlogs(){
 export async function getBlogPost(pageId: string) {
     const notionClient = new Client({ auth: notionApiKey });
     try {
-        const response = await notionClient.pages.retrieve({ page_id: pageId });
-        return response;
+        const response = await notionClient.blocks.children.list({ block_id: pageId });
+        const blogPost: BlogPost = {
+            id: pageId,
+            content: response.results.map((block) => {
+                if (block.type === 'paragraph') {
+                    return {
+                        tag: 'p',
+                        content: block.paragraph.rich_text.map((text) => text.plain_text).join('')
+                    }
+                } else if (block.type === 'heading_1') {
+                    return {
+                        // H1 will be for title, H2 will be for section headings
+                        tag: 'h2',
+                        content: block.heading_1.rich_text.map((text) => text.plain_text).join('')
+                    }
+                }
+            }).filter(obj => obj !== null && obj !== undefined)
+        }
+        return blogPost;
     } catch (error) {
         console.error('Error fetching blog post from Notion:', error);
         return null;

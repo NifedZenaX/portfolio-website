@@ -24,3 +24,11 @@ export type Blogs = {
     title: string;
     created_time: string;
 }
+
+export type BlogPost = {
+    id: string;
+    content: {
+        tag: string,
+        content: string
+    }[];
+}
