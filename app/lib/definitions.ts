@@ -25,32 +25,19 @@ export type Blogs = {
     created_time: string;
 }
 
+export type BlogBlock =
+    | { tag: 'p'; content: string }
+    | { tag: 'h2'; content: string }
+    | { tag: 'h3'; content: string }
+    | { tag: 'h4'; content: string }
+    | { tag: 'ul'; items: string[] }
+    | { tag: 'ol'; items: string[] }
+    | { tag: 'blockquote'; content: string }
+    | { tag: 'code'; content: string; language: string }
+    | { tag: 'img'; src: string; alt: string }
+    | { tag: 'hr' };
+
 export type BlogPost = {
     id: string;
-    content: {
-        tag: string,
-        content: string
-    }[];
-}
-
-export type NotionBlock = {
-    type: string;
-    results: {
-        type: string;
-        id: string;
-        paragraph?: {
-            rich_text: {
-                plain_text: string;
-            }[];
-        };
-        heading_1?: {
-            rich_text: {
-                plain_text: string;
-            }[];
-        };
-        child_page?: {
-            title: string;
-        };
-        created_time: string;
-    }[];
+    content: BlogBlock[];
 }

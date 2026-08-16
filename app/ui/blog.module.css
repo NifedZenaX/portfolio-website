@@ -2,3 +2,55 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+.heading4 {
+  color: var(--heading);
+  font-size: 1.1rem;
+  font-weight: 350;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.list {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.orderedList {
+  color: var(--text-body);
+  line-height: 1.7;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+.blockquote {
+  color: var(--text-body);
+  border-left: 3px solid var(--border-section);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.code {
+  background: var(--border-section);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+.image {
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-section);
+  margin: 2rem 0;
+}
