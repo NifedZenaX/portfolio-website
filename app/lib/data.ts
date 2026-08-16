@@ -7,7 +7,7 @@ import {
     BlogPost,
     BlogBlock
 } from './definitions';
-import { Client } from '@notionhq/client';
+import { Client, isFullBlock } from '@notionhq/client';
 import { BlockObjectResponse, ChildPageBlockObjectResponse } from '@notionhq/client';
 import { create } from 'domain';
 import { resolve } from 'path';
@@ -45,6 +45,7 @@ export async function getBlogs(): Promise<Blogs[]> {
     try {
         const response = await notionClient.blocks.children.list({ block_id: notionBlogPageId });
         return response.results
+            .filter(isFullBlock)
             .filter((block): block is ChildPageBlockObjectResponse => block.type === 'child_page')
             .map((block) => ({
                 id: block.id,
@@ -153,7 +154,7 @@ export async function getBlogPost(pageId: string): Promise<BlogPost | null> {
                 block_id: pageId,
                 start_cursor: cursor,
             });
-            blocks.push(...(response.results as BlockObjectResponse[]));
+            blocks.push(...response.results.filter(isFullBlock));
             cursor = response.has_more ? response.next_cursor ?? undefined : undefined;
         } while (cursor);
 
